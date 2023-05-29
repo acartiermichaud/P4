@@ -3,8 +3,255 @@
   margin: 0;
 }
 
-h1 {
+body {
+  background-color: #F7F7F7;
+}
+
+.main-title {
   font-family: "Shrikhand", sans-serif;
+  color: #101010;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.secondary-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.secondary-title--presentation {
+  padding: 0 50px;
+}
+.secondary-title--section {
+  padding: 50px 20px 20px 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  padding: 15px 0 5px 0;
+  margin-bottom: 4px;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: #353535;
+  background-color: #EAEAEA;
+  padding: 12px 0 16px 0;
+  font-size: 18px;
+}
+
+.location__text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  row-gap: 12px;
+  padding: 40px 0;
+}
+
+.presentation__text {
+  color: #353535;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 0 30px;
+}
+
+.presentation__button {
+  background: linear-gradient(0deg, #9356DC -11%, #FF79DA 124%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 25px;
+  padding: 15px 21px;
+  margin: 15px;
+}
+
+.functioning {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding-bottom: 65px;
+}
+
+.functioning__contener {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 10px 40px 0 55px;
+}
+
+.functioning__step {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  background-color: #F7F7F7;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 20px;
+}
+
+.step-number {
+  position: absolute;
+  left: -12px;
+  width: 24px;
+  height: 24px;
+  background-color: #9356DC;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 15px;
+}
+
+.step-icon {
+  width: 25px;
+  color: #7E7E7E;
+  padding: 15px;
+}
+.step-icon--purple {
+  color: #9356DC;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 65px;
+}
+
+.restaurants__contener {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.restaurants__card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.no-decoration {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+.new-label {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 80px;
+  height: 29px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 29px;
+  color: #008766;
+  background-color: #99E2D0;
+}
+
+.card-img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.card-content {
+  display: flex;
+  width: 100%;
+  padding: 16px 12px;
+}
+
+.card-txt {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  gap: 5px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card-subtitle {
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.card-heart {
+  width: 15%;
+  padding: 5px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+  padding: 20px 25px;
+  gap: 15px;
+}
+
+.footer__logo {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.footer__contener {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  gap: 10px;
+}
+
+.footer__icon-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.footer__icon {
+  width: 15px;
+}
+
+.footer__links {
+  font-weight: 400;
+}
+
+.footer__contact {
+  text-decoration: none;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
