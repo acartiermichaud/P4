@@ -30,10 +30,21 @@ body {
 
     &--presentation {
         padding: 0 50px;
+
+        // Desktop devices
+        @media (min-width: 769px) {
+            font-size: 40px;
+            padding-bottom : 17px;
+        }
     }
 
     &--section {
         padding: 50px 20px 20px 20px;
+
+        // Desktop devices
+        @media (min-width: 769px) {
+            padding: 30px 20px 30px 20px;
+        }
     }
 }
 
@@ -54,9 +65,11 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    z-index: 5;
     background-color: $body-background-color;
-    animation: loader 2.8s forwards;
+    //animation: loader 2.8s forwards;
+
+    opacity: 0;
+    z-index: -3;
 }
 
 @keyframes loader {
@@ -81,6 +94,8 @@ body {
     height: 250px;
     z-index: 6;
     background-color: $body-background-color;
+
+    border: 1px solid black;
 }
 
 .cutting-board {
@@ -92,6 +107,8 @@ body {
     background: linear-gradient(0deg, $main-color -11%, $secondary-color 124%);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
+
+    opacity: 0;
 }
 
 .knife {
@@ -103,6 +120,8 @@ body {
     flex-wrap: nowrap;
     justify-content: center;
     animation: knife-mvt 2s forwards;
+
+    opacity: 0;
 
     .blade {
         width: 50px;
@@ -157,7 +176,8 @@ body {
     z-index: 7;
     background: linear-gradient(0deg, $main-color -10%, $secondary-color 30%);
     border-radius: 12% 88% 89% 11% / 54% 47% 53% 46%;
-    animation: carrot-mvt 170ms 1700ms ease-in forwards;
+    // animation: carrot-mvt 170ms 1700ms ease-in forwards;
+    opacity: 0;
 
     .cut{
         position: absolute;
@@ -221,11 +241,137 @@ body {
     }
 }
 
+.plate {
+    position: absolute;
+    margin: auto;
+    width: 100px;
+    height: 20px;
+    z-index: 6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    border: 3px solid $main-color;
+}
+
+.meat-1 {
+    position: absolute;
+    top: 2px;
+    margin-left: 45px;
+    width: 40px;
+    height: 15px;
+    z-index: 6;
+    background: linear-gradient(90deg, $main-color -11%, $secondary-color 124%);
+    border-radius: 24% 76% 77% 23% / 45% 44% 56% 55%;
+}
+
+.meat-2 {
+    position: absolute;
+    top: 6px;
+    margin-left: 68px;
+    width: 10px;
+    height: 5px;
+    z-index: 6;
+    background-color: $body-background-color;
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+}
+
+.vegetable {
+    position: absolute;
+    top: 2px;
+    margin-left: 17px;
+    width: 23px;
+    height: 13px;
+    z-index: 6;
+    background: linear-gradient(0deg, $main-color -10%, $secondary-color 30%);
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+}
+
+.steam-1 {
+    position: absolute;
+    top: 5px;
+    margin-left: 10px;
+    z-index: 6;
+}
+
+.steam-2 {
+    position: absolute;
+    top: 0;
+    margin-left: 27px;
+    z-index: 6;
+}
+
+.steam-3 {
+    position: absolute;
+    top: 5px;
+    margin-left: 44px;
+    z-index: 6;
+}
+
+.steam-part-1 {
+    position: absolute;
+    top: -32px;
+    margin-left: 17px;
+    width: 12px;
+    height: 15px;
+    z-index: 6;
+    border-left: 3px solid $main-color;
+    border-radius: 50%;
+}
+
+.steam-part-2 {
+    position: absolute;
+    top: -46px;
+    margin-left: 13px;
+    width: 12px;
+    height: 15px;
+    z-index: 6;
+    border-right: 3px solid $main-color;
+    border-radius: 50%;
+}
+
+.steam-part-3 {
+    position: absolute;
+    top: -60px;
+    margin-left: 17px;
+    width: 12px;
+    height: 15px;
+    z-index: 6;
+    border-left: 3px solid $main-color;
+    border-radius: 50%;
+}
+
+.bell {
+    position: absolute;
+    top: 90px;
+    margin-left: auto;
+    width: 80px;
+    height: 40px;
+    z-index: 6;
+    background-color: white;
+    border: 3px solid $main-color;
+    border-radius: 48% 52% 47% 53% / 82% 80% 20% 18%;
+
+    opacity: 0;
+}
+
+.bell-wrist {
+    position: absolute;
+    top: -10px;
+    margin-left: 33px;
+    width: 8px;
+    height: 8px;
+    z-index: 6;
+    background-color: white;
+    border: 3px solid $main-color;
+    border-radius: 50%;
+
+    opacity: 0;
+}
+
 .loading-bar {
     position: absolute;
     top: 180px;
     margin-left: auto;
-    margin-bottom: auto;
+    margin-right: auto;
     width: 200px;
     height: 15px;
     z-index: 6;
@@ -238,7 +384,7 @@ body {
         height: 100%;
         background: linear-gradient(90deg, $main-color -11%, $secondary-color 124%);
         border-radius: 25px;
-        animation: loading 1300ms cubic-bezier(.69,.02,.89,.7) forwards;
+        //animation: loading 1300ms cubic-bezier(.69,.02,.89,.7) forwards;
     }
 }
 
@@ -272,6 +418,18 @@ body {
     &__logo {
         width: 162px;
         height: auto;
+
+        // Desktop devices
+        @media (min-width: 769px) {
+            width: 200px;
+        }
+    }
+
+    // Desktop devices
+    @media (min-width: 769px) {
+        padding: 30px 0;
+        margin: 0;
+        box-shadow: none;
     }
 }
 
@@ -291,6 +449,11 @@ body {
         font-size: 16px;
         font-weight: 500;
     }
+
+    // Desktop devices
+    @media (min-width: 769px) {
+        padding: 16px 0;
+    }
 }
 
 
@@ -308,7 +471,12 @@ body {
         color: $dark-grey-color;
         font-size: 18px;
         font-weight: 300;
-        padding: 0 30px;
+        padding: 0 30px 3px 30px;
+    }
+
+    // Desktop devices
+    @media (min-width: 769px) {
+        padding: 30px 0 15px 0;
     }
 }
 
@@ -358,30 +526,62 @@ body {
 .functioning {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     background-color: white;
     padding-bottom: 65px;
+
+    &__margins {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     &__contener {
         display: flex;
         flex-direction: column;
-        align-content: center;
+        justify-content: center;
         align-items: center;
+        width: auto;
         gap: 25px;
-        padding: 10px 40px 0 55px;
+        margin: 0 17px 0 30px;
+
+        // Desktop devices
+        @media (min-width: 769px) {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 32px;
+        }
     }
     
     &__step {
         display: flex;
-        align-content: center;
         align-items: center;
         position: relative;
-        width: 100%;
+        width: 87%;
+        max-width: 282px;
         background-color: $body-background-color;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         border-radius: 20px;
         font-size: 16px;
         font-weight: 500;
         padding: 20px;
+
+        // Desktop devices
+        @media (min-width: 769px) {
+            width: 30%;
+        }
+
+    }
+
+    // Desktop devices
+    @media (min-width: 769px) {
+        padding: 20px 0 50px 0;
     }
 }
 
@@ -414,21 +614,58 @@ body {
 .restaurants {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     padding-bottom: 65px;
-}
 
-.restaurants__contener {
-    display: flex;
-    flex-direction: column;
-    gap: 17px;
-    padding: 0 17px;
-}
+    &__margins {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.restaurants__card {
-    display: flex;
-    flex-direction: column;
-    border-radius: 15px;
-    background-color: white;
+    &__contener {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        gap: 17px;
+        padding: 0 17px;
+
+        // Desktop devices
+        @media (min-width: 769px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            column-gap: 0;
+            row-gap: 50px;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 472px;
+        border-radius: 15px;
+        background-color: white;
+
+        // Desktop devices
+        @media (min-width: 769px) {
+            width: 47.6%;
+        }
+    }
+
+    // Desktop devices
+    @media (min-width: 769px) {
+        padding-bottom: 30px;
+    }
 }
 
 .no-decoration {
@@ -436,7 +673,7 @@ body {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    color:black
+    color:black;
 }
 
 .card-img-contener {
@@ -452,7 +689,7 @@ body {
     position: absolute;
     top: -56px;
     left: -2px;
-    width: 346px;
+    width: 100%;
     height: 231px;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
@@ -530,7 +767,7 @@ body {
         color: transparent;
         background-image: linear-gradient(180deg, $main-color 10%, $secondary-color 70%);
         background-clip: text;
-        transition: opacity 700ms;
+        transition: opacity 600ms;
     }
 
     .check-heart:checked + label .colored-heart {
@@ -575,16 +812,34 @@ body {
 
         &__links {
             font-weight: 400;
+
+            // Desktop devices
+            @media (min-width: 769px) {
+                padding: 0 10px 0 35px;
+            }            
         }
         
         &__contact {
             text-decoration: none;
             color: white;
         }
+
+        // Desktop devices
+        @media (min-width: 769px) {
+        flex-direction: row;
+        align-items: center;
+        }
     }
     
     &__icon {
         width: 15px;
+    }
+
+    // Desktop devices
+    @media (min-width: 769px) {
+        flex-direction: row-reverse;
+        padding: 60px 70px 30px 25px;
+        gap: 90px;
     }
 }
 
