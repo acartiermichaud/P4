@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ohmyfood</title>
+
+    <!-- Google fonts import : Roboto 300, 400, 500 & 700 and Shrikhand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Shrikhand&amp;display=swap" rel="stylesheet">
+
+    <!-- Link to Font Awesome library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Link to CSS file -->    
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header-restaurant">
+        <div class="header__icon"><a class="header__icon__link" href="../index.html"><i class="fa-solid fa-lg fa-arrow-left"></i></a></div>
+        <img class="header__logo" src="../assets/images/logo/ohmyfood.png" alt="Logo ohmyfood">
+    </header>
+
+    <!-- Main -->
+    <main class="menu">
+        <div class="menu__img-contener">
+            <img class="menu__img" src="../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo d'une assiette sur une table de restaurant">
+        </div>
+
+        <div class="menu__contener">
+            <div class="menu__title-contener">
+                <h1 class="menu__title">Le délice des sens</h1>
+                <div class="heart-contener">
+                    <input class="check-heart" id="heart-4" type="checkbox">
+                    <label for="heart-4">
+                        <i class="empty-heart fa-xl fa-regular fa-heart"></i>
+                        <i class="colored-heart fa-xl fa-solid fa-heart"></i>
+                    </label>
+                </div>
+            </div>
+
+            <section class="menu-part">
+                <div class="menu-part__title-contener">
+                    <h2 class="menu-part__title">ENTRÉES</h2>
+                    <div class="menu-part__line"></div>
+                </div>
+                <article class="dish">
+                    <h3 class="dish__title">Tartare de thon</h3>
+                    <div class="dish__contener">
+                        <p class="dish__subtitle">Assaisonné au yuzu</p>
+                        <p class="dish__price">25€</p>
+                    </div>
+                </article>
+                <article class="dish">
+                    <h3 class="dish__title">Bouchée de homard croustillant</h3>
+                    <div class="dish__contener">
+                        <p class="dish__subtitle">Et sa farandole de petits légumes</p>
+                        <p class="dish__price">35€</p>
+                    </div>
+                </article>
+                <article class="dish">
+                    <h3 class="dish__title">Poulet rôti aux herbes de Provence</h3>
+                    <div class="dish__contener">
+                        <p class="dish__subtitle">Et sa crème de truffe</p>
+                        <p class="dish__price">40€</p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="menu-part">
+                <div class="menu-part__title-contener">
+                    <h2 class="menu-part__title">PLATS</h2>
+                    <div class="menu-part__line"></div>
+                </div>
+                <article class="dish">
+                    <h3 class="dish__title">Poulet rôti aux herbes de Provence</h3>
+                    <div class="dish__contener">
+                        <p class="dish__subtitle">Et sa crème de truffe</p>
+                        <p class="dish__price">40€</p>
+                    </div>
+                </article>
+                <article class="dish">
+                    <h3 class="dish__title">Langouste rôtie</h3>
+                    <div class="dish__contener">
+                        <p class="dish__subtitle">Et ses légumes de saison</p>
+                        <p class="dish__price">35€</p>
+                    </div>
+                </article>
+                <article class="dish">
+                    <h3 class="dish__title">Côte de bœuf Angus</h3>
+                    <div class="dish__contener">
+                        <p class="dish__subtitle">Et sa purée de panais</p>
+                        <p class="dish__price">44€</p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="menu-part">
+                <div class="menu-part__title-contener">
+                    <h2 class="menu-part__title">DESSERTS</h2>
+                    <div class="menu-part__line"></div>
+                </div>
+                <article class="dish">
+                    <h3 class="dish__title">Œuf au plat</h3>
+                    <div class="dish__contener">
+                        <p class="dish__subtitle">Assaisonné à la truffe sur lit de caviar</p>
+                        <p class="dish__price">76€</p>
+                    </div>
+                </article>
+                <article class="dish">
+                    <h3 class="dish__title">Crème brulée</h3>
+                    <div class="dish__contener">
+                        <p class="dish__subtitle">Revisitée</p>
+                        <p class="dish__price">22€</p>
+                    </div>
+                </article>
+                <article class="dish">
+                    <h3 class="dish__title">Tiramisu</h3>
+                    <div class="dish__contener">
+                        <p class="dish__subtitle">À la noisette</p>
+                        <p class="dish__price">23€</p>
+                    </div>
+                </article>
+
+                <div class="button-contener">
+                    <a class="button" href="#"><span class="button-text">Commander</span></a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h3 class="footer__title">ohmyfood</h3>
+        <div class="footer__contener">
+            <div class="footer__contener__icon-links"><i class="footer__icon fa-sm fa-solid fa-utensils"></i><p>Proposer un restaurant</p></div>
+            <div class="footer__contener__icon-links"><i class="footer__icon fa-xs fa-solid fa-handshake-angle"></i><p>Devenir partenaire</p></div>
+            <p class="footer__contener__links">Mentions légales</p>
+            <a class="footer__contener__contact" href="mailto:ohmyfood@gmail.com">Contact</a>
+        </div>
+    </footer>
+    
+</body>
+
+</html>

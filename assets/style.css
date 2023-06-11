@@ -1,42 +1,3 @@
-* {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-}
-
-body {
-  background-color: #F7F7F7;
-  position: relative;
-}
-
-.title {
-  font-size: 24px;
-  font-weight: 700;
-}
-.title--presentation {
-  padding: 0 50px;
-}
-@media (min-width: 769px) {
-  .title--presentation {
-    font-size: 40px;
-    padding-bottom: 17px;
-  }
-}
-.title--section {
-  padding: 50px 20px 20px 20px;
-}
-@media (min-width: 769px) {
-  .title--section {
-    padding: 30px 20px 30px 20px;
-  }
-}
-
-.menu-title {
-  font-family: "Shrikhand", sans-serif;
-  color: #101010;
-  font-size: 30px;
-  font-weight: 400;
-}
-
 .loader-page {
   position: fixed;
   display: flex;
@@ -360,33 +321,6 @@ body {
     width: 100%;
   }
 }
-.header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-  padding: 20px 0 10px 0;
-  margin-bottom: 4px;
-}
-.header__logo {
-  width: 162px;
-  height: auto;
-}
-@media (min-width: 769px) {
-  .header__logo {
-    width: 200px;
-  }
-}
-@media (min-width: 769px) {
-  .header {
-    padding: 30px 0;
-    margin: 0;
-    box-shadow: none;
-  }
-}
-
 .location {
   display: flex;
   justify-content: center;
@@ -427,8 +361,7 @@ body {
     padding: 30px 0 15px 0;
   }
 }
-
-.presentation__button {
+.presentation .button {
   position: relative;
   z-index: 0;
   text-decoration: none;
@@ -438,14 +371,14 @@ body {
   padding: 15px 21px;
   margin: 15px;
 }
-.presentation__button .button-text {
+.presentation .button .button-text {
   position: relative;
   z-index: 2;
   color: white;
   font-size: 16px;
   font-weight: 500;
 }
-.presentation__button::after {
+.presentation .button::after {
   content: "";
   position: absolute;
   left: 0;
@@ -459,7 +392,7 @@ body {
   border-radius: 25px;
   transition: opacity 500ms;
 }
-.presentation__button:hover::after {
+.presentation .button:hover::after {
   opacity: 1;
   z-index: 1;
 }
@@ -705,6 +638,228 @@ body {
 .heart-contener .check-heart:checked + label .empty-heart {
   z-index: -1;
   opacity: 0;
+}
+
+.header-restaurant {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: white;
+  padding: 20px 0 10px 0;
+}
+
+.header__icon {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  z-index: 1;
+}
+.header__icon__link {
+  text-decoration: none;
+  color: #353535;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.menu__img-contener {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  z-index: 0;
+}
+.menu__img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+.menu__contener {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding-bottom: 65px;
+  border-radius: 40px 40px 0 0;
+  background-color: #F6F6F6;
+  z-index: 1;
+  padding: 0 15px;
+}
+.menu__title-contener {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.menu__title-contener > .heart-contener {
+  top: 30px;
+  left: 15px;
+}
+.menu__title {
+  font-family: "Shrikhand", sans-serif;
+  color: #101010;
+  font-size: 28px;
+  font-weight: 400;
+  padding: 32px 0;
+}
+
+.menu-part {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 40px;
+  gap: 12px;
+}
+.menu-part__title-contener {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.menu-part__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 3.5px;
+}
+.menu-part__line {
+  background-color: #99E2D0;
+  width: 40px;
+  height: 3px;
+}
+
+.dish {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 12px 15px;
+  row-gap: 5px;
+  font-family: "Roboto", sans-serif;
+}
+.dish__title {
+  font-size: 18px;
+  font-weight: 500;
+}
+.dish__contener {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 15px;
+}
+.dish__subtitle {
+  font-weight: 300;
+}
+.dish__price {
+  font-weight: 700;
+  color: #353535;
+}
+
+.button-contener {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  padding-top: 25px;
+}
+
+.button {
+  position: relative;
+  z-index: 0;
+  text-decoration: none;
+  background: linear-gradient(0deg, #9356DC -11%, #FF79DA 124%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  padding: 15px 50px;
+  margin: 0;
+}
+.button .button-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(0deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 25px;
+  transition: opacity 500ms;
+}
+.button:hover::after {
+  opacity: 1;
+  z-index: 1;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+body {
+  background-color: #F7F7F7;
+  position: relative;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.title--presentation {
+  padding: 0 50px;
+}
+@media (min-width: 769px) {
+  .title--presentation {
+    font-size: 40px;
+    padding-bottom: 17px;
+  }
+}
+.title--section {
+  padding: 50px 20px 20px 20px;
+}
+@media (min-width: 769px) {
+  .title--section {
+    padding: 30px 20px 30px 20px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  padding: 20px 0 10px 0;
+  margin-bottom: 4px;
+}
+.header__logo {
+  width: 162px;
+  height: auto;
+}
+@media (min-width: 769px) {
+  .header__logo {
+    width: 200px;
+  }
+}
+@media (min-width: 769px) {
+  .header {
+    padding: 30px 0;
+    margin: 0;
+    box-shadow: none;
+  }
 }
 
 .footer {
