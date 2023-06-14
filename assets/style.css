@@ -7,12 +7,13 @@
   width: 100%;
   height: 100%;
   background-color: #F7F7F7;
-  opacity: 0;
-  z-index: -3;
+  opacity: 1;
+  z-index: 5;
+  animation: loader 300ms 2700ms forwards;
 }
 
 @keyframes loader {
-  0%, 80% {
+  0% {
     opacity: 1;
     z-index: 5;
   }
@@ -32,7 +33,6 @@
   height: 250px;
   z-index: 6;
   background-color: #F7F7F7;
-  border: 1px solid black;
 }
 
 .cutting-board {
@@ -44,9 +44,17 @@
   background: linear-gradient(0deg, #9356DC -11%, #FF79DA 124%);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
-  opacity: 0;
+  animation: cutting-board 150ms 1050ms forwards;
 }
 
+@keyframes cutting-board {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .knife {
   position: absolute;
   top: 107px;
@@ -55,8 +63,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  animation: knife-mvt 2s forwards;
-  opacity: 0;
+  animation: knife-mvt 1000ms forwards;
 }
 .knife .blade {
   width: 50px;
@@ -97,6 +104,12 @@
   74%, 100% {
     transform: translateX(15px) rotate(60deg) translateY(-50px);
   }
+  97% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .carrot {
   position: absolute;
@@ -108,7 +121,7 @@
   z-index: 7;
   background: linear-gradient(0deg, #9356DC -10%, #FF79DA 30%);
   border-radius: 12% 88% 89% 11%/54% 47% 53% 46%;
-  opacity: 0;
+  animation: carrot-mvt 170ms 1000ms ease-in forwards;
 }
 .carrot .cut {
   position: absolute;
@@ -120,15 +133,15 @@
 }
 .carrot .cut-1 {
   left: 25%;
-  animation: carrot-cut-1 150ms 220ms linear forwards;
+  animation: carrot-cut-1 150ms 100ms linear forwards;
 }
 .carrot .cut-2 {
   left: 50%;
-  animation: carrot-cut-2 150ms 750ms linear forwards;
+  animation: carrot-cut-2 150ms 400ms linear forwards;
 }
 .carrot .cut-3 {
   left: 75%;
-  animation: carrot-cut-3 150ms 1220ms linear forwards;
+  animation: carrot-cut-3 150ms 600ms linear forwards;
 }
 
 @keyframes carrot-mvt {
@@ -173,9 +186,10 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
   border: 3px solid #9356DC;
+  opacity: 0;
+  animation: plate 150ms 1400ms forwards;
 }
-
-.meat-1 {
+.plate .meat-1 {
   position: absolute;
   top: 2px;
   margin-left: 45px;
@@ -185,8 +199,7 @@
   background: linear-gradient(90deg, #9356DC -11%, #FF79DA 124%);
   border-radius: 24% 76% 77% 23%/45% 44% 56% 55%;
 }
-
-.meat-2 {
+.plate .meat-2 {
   position: absolute;
   top: 6px;
   margin-left: 68px;
@@ -196,8 +209,7 @@
   background-color: #F7F7F7;
   border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
 }
-
-.vegetable {
+.plate .vegetable {
   position: absolute;
   top: 2px;
   margin-left: 17px;
@@ -208,28 +220,38 @@
   border-radius: 50% 50% 50% 50%/100% 100% 0% 0%;
 }
 
-.steam-1 {
+@keyframes plate {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.steam {
+  animation: steam 200ms 2000ms forwards;
+}
+.steam .steam-1 {
   position: absolute;
   top: 5px;
   margin-left: 10px;
   z-index: 6;
 }
-
-.steam-2 {
+.steam .steam-2 {
   position: absolute;
   top: 0;
   margin-left: 27px;
   z-index: 6;
 }
-
-.steam-3 {
+.steam .steam-3 {
   position: absolute;
   top: 5px;
   margin-left: 44px;
   z-index: 6;
 }
-
-.steam-part-1 {
+.steam .steam-part-1 {
   position: absolute;
   top: -32px;
   margin-left: 17px;
@@ -239,8 +261,7 @@
   border-left: 3px solid #9356DC;
   border-radius: 50%;
 }
-
-.steam-part-2 {
+.steam .steam-part-2 {
   position: absolute;
   top: -46px;
   margin-left: 13px;
@@ -250,8 +271,7 @@
   border-right: 3px solid #9356DC;
   border-radius: 50%;
 }
-
-.steam-part-3 {
+.steam .steam-part-3 {
   position: absolute;
   top: -60px;
   margin-left: 17px;
@@ -262,6 +282,14 @@
   border-radius: 50%;
 }
 
+@keyframes steam {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .bell {
   position: absolute;
   top: 90px;
@@ -273,9 +301,9 @@
   border: 3px solid #9356DC;
   border-radius: 48% 52% 47% 53%/82% 80% 20% 18%;
   opacity: 0;
+  animation: bell 300ms 2000ms forwards;
 }
-
-.bell-wrist {
+.bell .bell-wrist {
   position: absolute;
   top: -10px;
   margin-left: 33px;
@@ -285,9 +313,18 @@
   background-color: white;
   border: 3px solid #9356DC;
   border-radius: 50%;
-  opacity: 0;
 }
 
+@keyframes bell {
+  0% {
+    opacity: 1;
+    transform: rotate(-90deg) translate(50px, -50px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
 .loading-bar {
   position: absolute;
   top: 180px;
@@ -305,19 +342,26 @@
   height: 100%;
   background: linear-gradient(90deg, #9356DC -11%, #FF79DA 124%);
   border-radius: 25px;
+  animation: loading 2500ms cubic-bezier(0.69, 0.02, 0.89, 0.7) forwards;
 }
 
 @keyframes loading {
   0% {
     width: 0%;
   }
-  25%, 27% {
-    width: 20%;
+  10%, 15% {
+    width: 15%;
   }
-  60%, 62% {
-    width: 60%;
+  20%, 25% {
+    width: 35%;
   }
-  100% {
+  30%, 35% {
+    width: 70%;
+  }
+  60%, 80% {
+    width: 90%;
+  }
+  90%, 100% {
     width: 100%;
   }
 }
@@ -649,6 +693,11 @@
   background-color: white;
   padding: 20px 0 10px 0;
 }
+@media (min-width: 769px) {
+  .header-restaurant {
+    padding: 30px 0 32px 0;
+  }
+}
 
 .header__icon {
   position: absolute;
@@ -660,11 +709,17 @@
   text-decoration: none;
   color: #353535;
 }
+@media (min-width: 769px) {
+  .header__icon {
+    top: 40px;
+  }
+}
 
 .menu {
   display: flex;
   flex-direction: column;
   width: 100%;
+  background-color: white;
 }
 .menu__img-contener {
   position: relative;
@@ -672,10 +727,23 @@
   height: 220px;
   z-index: 0;
 }
+@media (min-width: 769px) {
+  .menu__img-contener {
+    height: 383px;
+    overflow: hidden;
+  }
+}
 .menu__img {
   width: 100%;
   height: 275px;
   object-fit: cover;
+}
+@media (min-width: 769px) {
+  .menu__img {
+    height: 956px;
+    position: absolute;
+    top: -330px;
+  }
 }
 .menu__contener {
   display: flex;
@@ -687,6 +755,15 @@
   z-index: 1;
   padding: 0 15px;
 }
+@media (min-width: 769px) {
+  .menu__contener {
+    position: relative;
+    top: -40px;
+    padding: 20px 215px 0 215px;
+    width: 46%;
+    max-width: 1055px;
+  }
+}
 .menu__title-contener {
   display: flex;
   justify-content: space-between;
@@ -696,12 +773,30 @@
   top: 30px;
   left: 15px;
 }
+@media (min-width: 769px) {
+  .menu__title-contener {
+    justify-content: center;
+    gap: 25px;
+  }
+}
 .menu__title {
   font-family: "Shrikhand", sans-serif;
   color: #101010;
   font-size: 28px;
   font-weight: 400;
   padding: 32px 0;
+}
+@media (min-width: 769px) {
+  .menu__title {
+    padding-bottom: 40px;
+  }
+}
+@media (min-width: 769px) {
+  .menu {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -40px;
+  }
 }
 
 .menu-part {
@@ -715,6 +810,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  opacity: 0;
 }
 .menu-part__title {
   font-family: "Roboto", sans-serif;
@@ -728,35 +824,163 @@
   height: 3px;
 }
 
+.dish_contener {
+  position: relative;
+}
+.dish_contener .check-dish {
+  position: absolute;
+  left: -9999px;
+}
+
+.check-dish:checked + label .dish__selector {
+  transform: translateX(-59px);
+}
+
+.check-dish:checked + label .dish__price-contener {
+  transform: translateX(-59px);
+}
+
+.check-dish:checked + label .dish__subtitle,
+.check-dish:checked + label .dish__title {
+  padding-right: 90px;
+}
+
 .dish {
   display: flex;
-  flex-direction: column;
+  position: relative;
   width: auto;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   padding: 12px 15px;
-  row-gap: 5px;
   font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+}
+.dish__txt {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  row-gap: 5px;
 }
 .dish__title {
   font-size: 18px;
   font-weight: 500;
-}
-.dish__contener {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  font-size: 15px;
+  padding-right: 35px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .dish__subtitle {
+  font-size: 15px;
   font-weight: 300;
+  padding-right: 35px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.dish__price-contener {
+  position: absolute;
+  top: 40px;
+  right: 15px;
+  transition: transform 300ms;
 }
 .dish__price {
+  font-size: 15px;
   font-weight: 700;
   color: #353535;
 }
+.dish__selector {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: -59px;
+  width: 59px;
+  height: 71px;
+  background-color: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  transition: transform 300ms;
+}
+.dish__check-circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 15px;
+  color: #99E2D0;
+  font-weight: 700;
+  font-size: 18px;
+}
+.mvt-1 {
+  animation: dish-mvt 200ms 150ms cubic-bezier(0.19, 0.7, 0.15, 0.96) forwards;
+}
 
+.mvt-2 {
+  animation: dish-mvt 200ms 300ms cubic-bezier(0.19, 0.7, 0.15, 0.96) forwards;
+}
+
+.mvt-3 {
+  animation: dish-mvt 200ms 450ms cubic-bezier(0.19, 0.7, 0.15, 0.96) forwards;
+}
+
+.mvt-4 {
+  animation: dish-mvt 200ms 600ms cubic-bezier(0.19, 0.7, 0.15, 0.96) forwards;
+}
+
+.mvt-5 {
+  animation: dish-mvt 200ms 750ms cubic-bezier(0.19, 0.7, 0.15, 0.96) forwards;
+}
+
+.mvt-6 {
+  animation: dish-mvt 200ms 900ms cubic-bezier(0.19, 0.7, 0.15, 0.96) forwards;
+}
+
+.mvt-7 {
+  animation: dish-mvt 200ms 1050ms cubic-bezier(0.19, 0.7, 0.15, 0.96) forwards;
+}
+
+.mvt-8 {
+  animation: dish-mvt 200ms 1200ms cubic-bezier(0.19, 0.7, 0.15, 0.96) forwards;
+}
+
+.mvt-9 {
+  animation: dish-mvt 200ms 1350ms cubic-bezier(0.19, 0.7, 0.15, 0.96) forwards;
+}
+
+.mvt-10 {
+  animation: dish-mvt 200ms 1500ms cubic-bezier(0.19, 0.7, 0.15, 0.96) forwards;
+}
+
+.mvt-11 {
+  animation: dish-mvt 200ms 1650ms cubic-bezier(0.19, 0.7, 0.15, 0.96) forwards;
+}
+
+.mvt-12 {
+  animation: dish-mvt 200ms 1800ms cubic-bezier(0.19, 0.7, 0.15, 0.96) forwards;
+}
+
+.mvt-13 {
+  animation: dish-mvt 200ms 1950ms cubic-bezier(0.19, 0.7, 0.15, 0.96) forwards;
+}
+
+@keyframes dish-mvt {
+  0% {
+    opacity: 0;
+    transform: translateX(1000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 .button-contener {
   display: flex;
   flex-direction: column;
