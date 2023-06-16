@@ -23,12 +23,12 @@
 
 <body>
     <!-- Loader -->
-    <div class="loader-page">
-        <div class="loader-contener">
+    <div class="loader">
+        <div class="loader__contener">
             <div class="cutting-board"></div>
             <div class="knife">
-                <div class="blade"></div>
-                <div class="handle"></div>
+                <div class="knife__blade"></div>
+                <div class="knife__handle"></div>
             </div>
             <div class="carrot">
                 <div class="cut cut-1"></div>
@@ -40,28 +40,28 @@
                 <div class="meat-2"></div>
                 <div class="vegetable"></div>
                 <div class="steam">
-                    <div class="steam-1">
-                        <div class="steam-part-1"></div>
-                        <div class="steam-part-2"></div>
-                        <div class="steam-part-3"></div>
+                    <div class="steam__1">
+                        <div class="steam__part-1"></div>
+                        <div class="steam__part-2"></div>
+                        <div class="steam__part-3"></div>
                     </div>
-                    <div class="steam-2">
-                        <div class="steam-part-1"></div>
-                        <div class="steam-part-2"></div>
-                        <div class="steam-part-3"></div>
+                    <div class="steam__2">
+                        <div class="steam__part-1"></div>
+                        <div class="steam__part-2"></div>
+                        <div class="steam__part-3"></div>
                     </div>
-                    <div class="steam-3">
-                        <div class="steam-part-1"></div>
-                        <div class="steam-part-2"></div>
-                        <div class="steam-part-3"></div>
+                    <div class="steam__3">
+                        <div class="steam__part-1"></div>
+                        <div class="steam__part-2"></div>
+                        <div class="steam__part-3"></div>
                     </div>
                 </div>
             </div>
             <div class="bell">
-                <div class="bell-wrist"></div>
+                <div class="bell__wrist"></div>
             </div>
             <div class="loading-bar">
-                <div class="progress"></div>
+                <div class="loading-bar__progress"></div>
             </div>
         </div>
     </div>
@@ -91,19 +91,19 @@
             <div class="functioning__margins">
                 <h1 class="title title--section">Fonctionnement</h1>
                 <div class="functioning__contener">
-                    <div class="functioning__step">
-                        <p class="step-number">1</p>
-                        <i class="step-icon fa-lg fa-solid fa-mobile-screen-button"></i>
+                    <div class="step">
+                        <p class="step__number">1</p>
+                        <i class="step__icon fa-lg fa-solid fa-mobile-screen-button"></i>
                         <p>Choisissez un restaurant</p>
                     </div>
-                    <div class="functioning__step">
-                        <p class="step-number">2</p>
-                        <i class="step-icon fa-lg fa-solid fa-list-ul"></i>
+                    <div class="step">
+                        <p class="step__number">2</p>
+                        <i class="step__icon fa-lg fa-solid fa-list-ul"></i>
                         <p>Composez votre menu</p>
                     </div>
-                    <div class="functioning__step">
-                        <p class="step-number">3</p>
-                        <i class="step-icon fa-lg fa-solid fa-store"></i>
+                    <div class="step">
+                        <p class="step__number">3</p>
+                        <i class="step__icon fa-lg fa-solid fa-store"></i>
                         <p>Dégustez au restaurant</p>
                     </div>
                 </div>
@@ -117,90 +117,82 @@
                 <h1 class="title title--section">Restaurants</h1>
                 <div class="restaurants__contener">
 
-                    <article class="restaurants__card">
-                        <a class="no-decoration" href="./restaurants/la-palette-du-gout.html">
-                            <div class="card-img-contener">
-                                <p class="new-label">Nouveau</p>
-                                <img class="card-img" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'une assiette sur une table de restaurant">
+                    <article class="card">
+                        <a class="card__link" href="./restaurants/la-palette-du-gout.html">
+                            <div class="card__img-contener">
+                                <p class="card__new-label">Nouveau</p>
+                                <img class="card__img" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'une assiette sur une table de restaurant">
                             </div>
-                            <div class="card-content">
-                                <div class="card-txt">
-                                    <h2 class="card-title">La palette du goût</h2>
-                                    <p class="card-subtitle">Menilmontant</p>
-                                </div>
-                                <div class="heart-contener">
-                                    <input class="check-heart" id="heart-1" type="checkbox">
-                                    <label for="heart-1">
-                                        <i class="empty-heart fa-xl fa-regular fa-heart"></i>
-                                        <i class="colored-heart fa-xl fa-solid fa-heart"></i>
-                                    </label>
-                                </div>
+                            <div class="card__txt">
+                                <h2 class="card__title">La palette du goût</h2>
+                                <p class="card__subtitle">Ménilmontant</p>
                             </div>
                         </a>
+                        <div class="heart">
+                            <input class="heart__checkable" id="heart-1" type="checkbox">
+                            <label for="heart-1">
+                                <i class="heart__empty fa-xl fa-regular fa-heart"></i>
+                                <i class="heart__colored fa-xl fa-solid fa-heart"></i>
+                            </label>
+                        </div>
                     </article>
 
-                    <article class="restaurants__card">
-                        <a class="no-decoration" href="./restaurants/la-note-enchantee.html">
-                            <div class="card-img-contener">
-                                <p class="new-label">Nouveau</p>
-                                <img class="card-img" src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'une assiette sur une table de restaurant">
+                    <article class="card">
+                        <a class="card__link" href="./restaurants/la-note-enchantee.html">
+                            <div class="card__img-contener">
+                                <p class="card__new-label">Nouveau</p>
+                                <img class="card__img" src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'une assiette sur une table de restaurant">
                             </div>
-                            <div class="card-content">
-                                <div class="card-txt">
-                                    <h2 class="card-title">La note enchantée</h2>
-                                    <p class="card-subtitle">Charonne</p>
-                                </div>
-                                <div class="heart-contener">
-                                    <input class="check-heart" id="heart-2" type="checkbox">
-                                    <label for="heart-2">
-                                        <i class="empty-heart fa-xl fa-regular fa-heart"></i>
-                                        <i class="colored-heart fa-xl fa-solid fa-heart"></i>
-                                    </label>
-                                </div>
+                            <div class="card__txt">
+                                <h2 class="card__title">La note enchantée</h2>
+                                <p class="card__subtitle">Charonne</p>
                             </div>
                         </a>
+                        <div class="heart">
+                            <input class="heart__checkable" id="heart-2" type="checkbox">
+                            <label for="heart-2">
+                                <i class="heart__empty fa-xl fa-regular fa-heart"></i>
+                                <i class="heart__colored fa-xl fa-solid fa-heart"></i>
+                            </label>
+                        </div>
                     </article>
 
-                    <article class="restaurants__card">
-                        <a class="no-decoration" href="./restaurants/a-la-francaise.html">
-                            <div class="card-img-contener">
-                                <img class="card-img" src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo d'une assiette sur une table de restaurant">
+                    <article class="card">
+                        <a class="card__link" href="./restaurants/a-la-francaise.html">
+                            <div class="card__img-contener">
+                                <img class="card__img" src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo d'une assiette sur une table de restaurant">
                             </div>
-                            <div class="card-content">
-                                <div class="card-txt">
-                                    <h2 class="card-title">À la française</h2>
-                                    <p class="card-subtitle">Cité Rouge</p>
-                                </div>
-                                <div class="heart-contener">
-                                    <input class="check-heart" id="heart-3" type="checkbox">
-                                    <label for="heart-3">
-                                        <i class="empty-heart fa-xl fa-regular fa-heart"></i>
-                                        <i class="colored-heart fa-xl fa-solid fa-heart"></i>
-                                    </label>
-                                </div>
+                            <div class="card__txt">
+                                <h2 class="card__title">À la française</h2>
+                                <p class="card__subtitle">Cité Rouge</p>
                             </div>
                         </a>
+                        <div class="heart">
+                            <input class="heart__checkable" id="heart-3" type="checkbox">
+                            <label for="heart-3">
+                                <i class="heart__empty fa-xl fa-regular fa-heart"></i>
+                                <i class="heart__colored fa-xl fa-solid fa-heart"></i>
+                            </label>
+                        </div>
                     </article>
 
-                    <article class="restaurants__card">
-                        <a class="no-decoration" href="./restaurants/le-delice-des-sens.html">
-                            <div class="card-img-contener">
-                                <img class="card-img" src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo d'une assiette sur une table de restaurant">
+                    <article class="card">
+                        <a class="card__link" href="./restaurants/le-delice-des-sens.html">
+                            <div class="card__img-contener">
+                                <img class="card__img" src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo d'une assiette sur une table de restaurant">
                             </div>
-                            <div class="card-content">
-                                <div class="card-txt">
-                                    <h2 class="card-title">Le délice des sens</h2>
-                                    <p class="card-subtitle">Folie-Méricourt</p>
-                                </div>
-                                <div class="heart-contener">
-                                    <input class="check-heart" id="heart-4" type="checkbox">
-                                    <label for="heart-4">
-                                        <i class="empty-heart fa-xl fa-regular fa-heart"></i>
-                                        <i class="colored-heart fa-xl fa-solid fa-heart"></i>
-                                    </label>
-                                </div>
+                            <div class="card__txt">
+                                <h2 class="card__title">Le délice des sens</h2>
+                                <p class="card__subtitle">Folie-Méricourt</p>
                             </div>
                         </a>
+                        <div class="heart">
+                            <input class="heart__checkable" id="heart-4" type="checkbox">
+                            <label for="heart-4">
+                                <i class="heart__empty fa-xl fa-regular fa-heart"></i>
+                                <i class="heart__colored fa-xl fa-solid fa-heart"></i>
+                            </label>
+                        </div>
                     </article>
                     
                 </div>
@@ -212,10 +204,10 @@
     <footer class="footer">
         <h3 class="footer__title">ohmyfood</h3>
         <div class="footer__contener">
-            <div class="footer__contener__icon-links"><i class="footer__icon fa-sm fa-solid fa-utensils"></i><p>Proposer un restaurant</p></div>
-            <div class="footer__contener__icon-links"><i class="footer__icon fa-xs fa-solid fa-handshake-angle"></i><p>Devenir partenaire</p></div>
-            <p class="footer__contener__links">Mentions légales</p>
-            <a class="footer__contener__contact" href="mailto:ohmyfood@gmail.com">Contact</a>
+            <div class="footer__icon-links"><i class="footer__icon fa-sm fa-solid fa-utensils"></i><p>Proposer un restaurant</p></div>
+            <div class="footer__icon-links"><i class="footer__icon fa-xs fa-solid fa-handshake-angle"></i><p>Devenir partenaire</p></div>
+            <p class="footer__links">Mentions légales</p>
+            <a class="footer__contact" href="mailto:ohmyfood@gmail.com">Contact</a>
         </div>
     </footer>
     

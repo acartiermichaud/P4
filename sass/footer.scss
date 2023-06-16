@@ -1,0 +1,64 @@
+// Color
+$dark-grey-color: #353535;
+
+
+// Footer
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $dark-grey-color;
+    color: white;
+    padding: 20px 25px;
+    gap: 15px;
+
+    &__title {
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    
+    &__contener {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        gap: 10px;
+
+        .footer__icon-links {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+
+        .footer__links {
+            font-weight: 400;
+
+            // Desktop devices
+            @media (min-width: 769px) {
+                padding: 0 10px 0 35px;
+            }            
+        }
+        
+        .footer__contact {
+            text-decoration: none;
+            color: white;
+        }
+
+        .footer__icon {
+            width: 15px;
+        }
+
+        // Desktop devices
+        @media (min-width: 769px) {
+        flex-direction: row;
+        align-items: center;
+        }
+    }
+    
+    // Desktop devices
+    @media (min-width: 769px) {
+        flex-direction: row-reverse;
+        padding: 60px 70px 30px 25px;
+        gap: 90px;
+    }
+}

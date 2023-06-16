@@ -1,15 +1,37 @@
-// Variables
-$main-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-
-$body-background-color: #F7F7F7;
-$main-title-color: #101010;
+// Colors
 $dark-grey-color: #353535;
 $location-background-color: #EAEAEA;
+$body-background-color: #F7F7F7;
+$main-color: #9356DC;
 $main-icon-color: #7E7E7E;
 $new-label-color: #008766;
-$new-label-background-color: #99E2D0;
+$tertiary-color: #99E2D0;
+
+
+// Titles
+.title {
+    font-size: 24px;
+    font-weight: 700;
+
+    &--presentation {
+        padding: 0 50px;
+
+        // Desktop devices
+        @media (min-width: 769px) {
+            font-size: 40px;
+            padding-bottom : 17px;
+        }
+    }
+
+    &--section {
+        padding: 50px 20px 20px 20px;
+
+        // Desktop devices
+        @media (min-width: 769px) {
+            padding: 30px 20px 30px 20px;
+        }
+    }
+}
 
 
 // Section "location"
@@ -99,26 +121,6 @@ $new-label-background-color: #99E2D0;
             gap: 32px;
         }
     }
-    
-    &__step {
-        display: flex;
-        align-items: center;
-        position: relative;
-        width: 87%;
-        max-width: 282px;
-        background-color: $body-background-color;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-        border-radius: 20px;
-        font-size: 16px;
-        font-weight: 500;
-        padding: 20px;
-
-        // Desktop devices
-        @media (min-width: 769px) {
-            width: 30%;
-        }
-
-    }
 
     // Desktop devices
     @media (min-width: 769px) {
@@ -126,27 +128,47 @@ $new-label-background-color: #99E2D0;
     }
 }
 
-.step-number {
-    position: absolute;
-    left: -12px;
-    width: 24px;
-    height: 24px;
-    background-color: $main-color;
-    color: white;
-    font-size: 14px;
+
+.step {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 87%;
+    max-width: 282px;
+    background-color: $body-background-color;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    font-size: 16px;
     font-weight: 500;
-    text-align: center;
-    line-height: 25px;
-    border-radius: 15px;
-}
+    padding: 20px;
 
-.step-icon {
-    width: 25px;
-    color: $main-icon-color;
-    padding : 15px;
+    // Desktop devices
+    @media (min-width: 769px) {
+        width: 30%;
+    }
 
-    &:hover{
-        color: $main-color;
+    &__number {
+        position: absolute;
+        left: -12px;
+        width: 24px;
+        height: 24px;
+        background-color: $main-color;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 25px;
+        border-radius: 15px;
+    }
+    
+    &__icon {
+        width: 25px;
+        color: $main-icon-color;
+        padding : 15px;
+    
+        &:hover{
+            color: $main-color;
+        }
     }
 }
 
@@ -189,135 +211,83 @@ $new-label-background-color: #99E2D0;
         }
     }
 
-    &__card {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: 472px;
-        border-radius: 15px;
-        background-color: white;
-
-        // Desktop devices
-        @media (min-width: 769px) {
-            width: 47.6%;
-        }
-    }
-
     // Desktop devices
     @media (min-width: 769px) {
         padding-bottom: 30px;
     }
 }
 
-.no-decoration {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color:black;
-}
 
-.card-img-contener {
+.card {
     display: flex;
     position: relative;
-    overflow : hidden;
     width: 100%;
-    height: 175px;
-    border-radius: 15px 15px 0 0;
-}
+    max-width: 472px;
+    border-radius: 15px;
+    background-color: white;
 
-.card-img {
-    position: absolute;
-    top: -56px;
-    left: -2px;
-    width: 100%;
-    height: 231px;
-    object-fit: cover;
-    border-radius: 15px 15px 0 0;
-}
-
-.new-label {
-    position: absolute;
-    z-index: 1;
-    top: 12px;
-    right: 12px;
-    width: 80px;
-    height: 29px;
-    font-size: 14px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 29px;
-    color: $new-label-color;
-    background-color: $new-label-background-color;
-}
-
-.card-content {
-    display: flex;
-    width: 100%;
-    padding: 16px 12px;
-}
-
-.card-txt {
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-    gap: 5px;
-}
-
-.card-title {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.card-subtitle {
-    font-size: 17px;
-    font-weight: 300;
-}
-
-.heart-contener {
-    position: relative;
-    width: 18%;
-
-    .check-heart {
-        position: absolute;
-        left: -9999px;
+    // Desktop devices
+    @media (min-width: 769px) {
+        width: 47.6%;
     }
 
-    .empty-heart {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 1;
-        opacity: 1;
-        padding-top: 18px;
-        cursor: pointer;
+    &__link {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color:black;
     }
 
-    .colored-heart {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: -1;
-        opacity: 0;
-        padding-top: 18px;
-        cursor: pointer;
-        color: transparent;
-        background-image: linear-gradient(180deg, $main-color 10%, $secondary-color 70%);
-        background-clip: text;
-        transition: opacity 600ms;
-    }
+    &__img-contener {
+        display: flex;
+        position: relative;
+        overflow : hidden;
+        width: 100%;
+        height: 175px;
+        border-radius: 15px 15px 0 0;
 
-    .check-heart:checked + label .colored-heart {
-        z-index: 2;
-        opacity: 1;
+        .card__new-label {
+            position: absolute;
+            z-index: 1;
+            top: 12px;
+            right: 12px;
+            width: 80px;
+            height: 29px;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 29px;
+            color: $new-label-color;
+            background-color: $tertiary-color;
+        }
+        
+        .card__img {
+            position: absolute;
+            top: -56px;
+            left: -2px;
+            width: 100%;
+            height: 231px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
     }
+    
+    &__txt {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        padding: 16px 12px;
+        gap: 5px;
 
-    .check-heart:checked + label .empty-heart {
-        z-index:-1;
-        opacity: 0;
-    }
+        .card__title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        
+        .card__subtitle {
+            font-size: 17px;
+            font-weight: 300;
+        }
+    } 
 }

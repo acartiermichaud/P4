@@ -23,7 +23,7 @@
 
 <body>
     <!-- Header -->
-    <header class="header-restaurant">
+    <header class="header__restaurant">
         <div class="header__icon"><a class="header__icon__link" href="../index.html"><i class="fa-solid fa-lg fa-arrow-left"></i></a></div>
         <img class="header__logo" src="../assets/images/logo/ohmyfood.png" alt="Logo ohmyfood">
     </header>
@@ -37,11 +37,11 @@
         <div class="menu__contener">
             <div class="menu__title-contener">
                 <h1 class="menu__title">La note enchantée</h1>
-                <div class="heart-contener">
-                    <input class="check-heart" id="heart-2" type="checkbox">
+                <div class="heart">
+                    <input class="heart__checkable" id="heart-2" type="checkbox">
                     <label for="heart-2">
-                        <i class="empty-heart fa-xl fa-regular fa-heart"></i>
-                        <i class="colored-heart fa-xl fa-solid fa-heart"></i>
+                        <i class="heart__empty fa-xl fa-regular fa-heart"></i>
+                        <i class="heart__colored fa-xl fa-solid fa-heart"></i>
                     </label>
                 </div>
             </div>
@@ -51,81 +51,69 @@
                     <h2 class="menu-part__title">ENTRÉES</h2>
                     <div class="menu-part__line"></div>
                 </div>
-                <article class="dish_contener">
-                    <input class="check-dish" id="dish_1-1" type="checkbox">
-                    <label for="dish_1-1">
-                        <div class="dish mvt-2">
-                            <div class="dish__txt">
-                                <h3 class="dish__title">Ravioles de foie gras</h3>
-                                <p class="dish__subtitle">Accompagnées de leur crème à la truffe</p>
-                            </div>
-                            <div class="dish__price-contener">
-                                <p class="dish__price">25€</p>
-                            </div>
-                            <div class="dish__selector">
-                                <div class="dish__check-circle">
-                                    <i class="fa-solid fa-sm fa-check"></i>
-                                </div>
-                            </div>
+                <article class="dish mvt-2">
+                    <input class="dish__checkable" id="dish_1-1" type="checkbox">
+                    <label class="checkable-area" for="dish_1-1"></label>
+                    <div class="dish__txt">
+                        <h3 class="dish__title">Ravioles de foie gras</h3>
+                        <p class="dish__subtitle">Accompagnées de leur crème à la truffe</p>
+                    </div>
+                    <div class="dish__price-contener">
+                        <p class="dish__price">25€</p>
+                    </div>
+                    <div class="dish__selector">
+                        <div class="dish__check-circle">
+                            <i class="fa-solid fa-sm fa-check"></i>
                         </div>
-                    </label>
+                    </div>
                 </article>
-                <article class="dish_contener">
-                    <input class="check-dish" id="dish_1-2" type="checkbox">
-                    <label for="dish_1-2">
-                        <div class="dish mvt-3">
-                            <div class="dish__txt">
-                                <h3 class="dish__title">Caviar osciètre</h3>
-                                <p class="dish__subtitle">Sur blini à la farine de blé noir</p>
-                            </div>
-                            <div class="dish__price-contener">
-                                <p class="dish__price">35€</p>
-                            </div>
-                            <div class="dish__selector">
-                                <div class="dish__check-circle">
-                                    <i class="fa-solid fa-sm fa-check"></i>
-                                </div>
-                            </div>
+                <article class="dish mvt-3">
+                    <input class="dish__checkable" id="dish_1-2" type="checkbox">
+                    <label class="checkable-area" for="dish_1-2"></label>
+                    <div class="dish__txt">
+                        <h3 class="dish__title">Caviar osciètre</h3>
+                        <p class="dish__subtitle">Sur blini à la farine de blé noir</p>
+                    </div>
+                    <div class="dish__price-contener">
+                        <p class="dish__price">35€</p>
+                    </div>
+                    <div class="dish__selector">
+                        <div class="dish__check-circle">
+                            <i class="fa-solid fa-sm fa-check"></i>
                         </div>
-                    </label>
+                    </div>
                 </article>
-                <article class="dish_contener">
-                    <input class="check-dish" id="dish_1-3" type="checkbox">
-                    <label for="dish_1-3">
-                        <div class="dish mvt-4">
-                            <div class="dish__txt">
-                                <h3 class="dish__title">Homard et espuma de potiron</h3>
-                                <p class="dish__subtitle">Marinés aux zestes d'orange</p>
-                            </div>
-                            <div class="dish__price-contener">
-                                <p class="dish__price">20€</p>
-                            </div>
-                            <div class="dish__selector">
-                                <div class="dish__check-circle">
-                                    <i class="fa-solid fa-sm fa-check"></i>
-                                </div>
-                            </div>
+                <article class="dish mvt-4">
+                    <input class="dish__checkable" id="dish_1-3" type="checkbox">
+                    <label class="checkable-area" for="dish_1-3"></label>
+                    <div class="dish__txt">
+                        <h3 class="dish__title">Homard et espuma de potiron</h3>
+                        <p class="dish__subtitle">Marinés aux zestes d'orange</p>
+                    </div>
+                    <div class="dish__price-contener">
+                        <p class="dish__price">20€</p>
+                    </div>
+                    <div class="dish__selector">
+                        <div class="dish__check-circle">
+                            <i class="fa-solid fa-sm fa-check"></i>
                         </div>
-                    </label>
+                    </div>
                 </article>
-                <article class="dish_contener">
-                    <input class="check-dish" id="dish_1-4" type="checkbox">
-                    <label for="dish_1-4">
-                        <div class="dish mvt-5">
-                            <div class="dish__txt">
-                                <h3 class="dish__title">Foie gras de canard cuit entier</h3>
-                                <p class="dish__subtitle">Confiture de figue et pain toasté</p>
-                            </div>
-                            <div class="dish__price-contener">
-                                <p class="dish__price">35€</p>
-                            </div>
-                            <div class="dish__selector">
-                                <div class="dish__check-circle">
-                                    <i class="fa-solid fa-sm fa-check"></i>
-                                </div>
-                            </div>
+                <article class="dish mvt-5">
+                    <input class="dish__checkable" id="dish_1-4" type="checkbox">
+                    <label class="checkable-area" for="dish_1-4"></label>
+                    <div class="dish__txt">
+                        <h3 class="dish__title">Foie gras de canard cuit entier</h3>
+                        <p class="dish__subtitle">Confiture de figue et pain toasté</p>
+                    </div>
+                    <div class="dish__price-contener">
+                        <p class="dish__price">35€</p>
+                    </div>
+                    <div class="dish__selector">
+                        <div class="dish__check-circle">
+                            <i class="fa-solid fa-sm fa-check"></i>
                         </div>
-                    </label>
+                    </div>
                 </article>
             </section>
 
@@ -134,62 +122,53 @@
                     <h2 class="menu-part__title">PLATS</h2>
                     <div class="menu-part__line"></div>
                 </div>
-                <article class="dish_contener">
-                    <input class="check-dish" id="dish_2-1" type="checkbox">
-                    <label for="dish_2-1">
-                        <div class="dish mvt-7">
-                            <div class="dish__txt">
-                                <h3 class="dish__title">Noix de coquilles Saint-Jacques</h3>
-                                <p class="dish__subtitle">Sur lit de purée de céleri-rave</p>
-                            </div>
-                            <div class="dish__price-contener">
-                                <p class="dish__price">40€</p>
-                            </div>
-                            <div class="dish__selector">
-                                <div class="dish__check-circle">
-                                    <i class="fa-solid fa-sm fa-check"></i>
-                                </div>
-                            </div>
+                <article class="dish mvt-7">
+                    <input class="dish__checkable" id="dish_2-1" type="checkbox">
+                    <label class="checkable-area" for="dish_2-1"></label>
+                    <div class="dish__txt">
+                        <h3 class="dish__title">Noix de coquilles Saint-Jacques</h3>
+                        <p class="dish__subtitle">Sur lit de purée de céleri-rave</p>
+                    </div>
+                    <div class="dish__price-contener">
+                        <p class="dish__price">40€</p>
+                    </div>
+                    <div class="dish__selector">
+                        <div class="dish__check-circle">
+                            <i class="fa-solid fa-sm fa-check"></i>
                         </div>
-                    </label>
+                    </div>
                 </article>
-                <article class="dish_contener">
-                    <input class="check-dish" id="dish_2-2" type="checkbox">
-                    <label for="dish_2-2">
-                        <div class="dish mvt-8">
-                            <div class="dish__txt">
-                                <h3 class="dish__title">Langoustine poêlée</h3>
-                                <p class="dish__subtitle">Purée de patate douce</p>
-                            </div>
-                            <div class="dish__price-contener">
-                                <p class="dish__price">35€</p>
-                            </div>
-                            <div class="dish__selector">
-                                <div class="dish__check-circle">
-                                    <i class="fa-solid fa-sm fa-check"></i>
-                                </div>
-                            </div>
+                <article class="dish mvt-8">
+                    <input class="dish__checkable" id="dish_2-2" type="checkbox">
+                    <label class="checkable-area" for="dish_2-2"></label>
+                    <div class="dish__txt">
+                        <h3 class="dish__title">Langoustine poêlée</h3>
+                        <p class="dish__subtitle">Purée de patate douce</p>
+                    </div>
+                    <div class="dish__price-contener">
+                        <p class="dish__price">35€</p>
+                    </div>
+                    <div class="dish__selector">
+                        <div class="dish__check-circle">
+                            <i class="fa-solid fa-sm fa-check"></i>
                         </div>
-                    </label>
+                    </div>
                 </article>
-                <article class="dish_contener">
-                    <input class="check-dish" id="dish_2-3" type="checkbox">
-                    <label for="dish_2-3">
-                        <div class="dish mvt-9">
-                            <div class="dish__txt">
-                                <h3 class="dish__title">Mijoté de queue de bœuf</h3>
-                                <p class="dish__subtitle">Et riz sauvage aux zestes de citron</p>
-                            </div>
-                            <div class="dish__price-contener">
-                                <p class="dish__price">45€</p>
-                            </div>
-                            <div class="dish__selector">
-                                <div class="dish__check-circle">
-                                    <i class="fa-solid fa-sm fa-check"></i>
-                                </div>
-                            </div>
+                <article class="dish mvt-9">
+                    <input class="dish__checkable" id="dish_2-3" type="checkbox">
+                    <label class="checkable-area" for="dish_2-3"></label>
+                    <div class="dish__txt">
+                        <h3 class="dish__title">Mijoté de queue de bœuf</h3>
+                        <p class="dish__subtitle">Et riz sauvage aux zestes de citron</p>
+                    </div>
+                    <div class="dish__price-contener">
+                        <p class="dish__price">45€</p>
+                    </div>
+                    <div class="dish__selector">
+                        <div class="dish__check-circle">
+                            <i class="fa-solid fa-sm fa-check"></i>
                         </div>
-                    </label>
+                    </div>
                 </article>
             </section>
 
@@ -198,62 +177,53 @@
                     <h2 class="menu-part__title">DESSERTS</h2>
                     <div class="menu-part__line"></div>
                 </div>
-                <article class="dish_contener">
-                    <input class="check-dish" id="dish_3-1" type="checkbox">
-                    <label for="dish_3-1">
-                        <div class="dish mvt-11">
-                            <div class="dish__txt">
-                                <h3 class="dish__title">Macaron noisette et chocolat</h3>
-                                <p class="dish__subtitle">Glace au caramel brun et sel de Guérande</p>
-                            </div>
-                            <div class="dish__price-contener">
-                                <p class="dish__price">18€</p>
-                            </div>
-                            <div class="dish__selector">
-                                <div class="dish__check-circle">
-                                    <i class="fa-solid fa-sm fa-check"></i>
-                                </div>
-                            </div>
+                <article class="dish mvt-11">
+                    <input class="dish__checkable" id="dish_3-1" type="checkbox">
+                    <label class="checkable-area" for="dish_3-1"></label>
+                    <div class="dish__txt">
+                        <h3 class="dish__title">Macaron noisette et chocolat</h3>
+                        <p class="dish__subtitle">Glace au caramel brun et sel de Guérande</p>
+                    </div>
+                    <div class="dish__price-contener">
+                        <p class="dish__price">18€</p>
+                    </div>
+                    <div class="dish__selector">
+                        <div class="dish__check-circle">
+                            <i class="fa-solid fa-sm fa-check"></i>
                         </div>
-                    </label>
+                    </div>
                 </article>
-                <article class="dish_contener">
-                    <input class="check-dish" id="dish_3-2" type="checkbox">
-                    <label for="dish_3-2">
-                        <div class="dish mvt-12">
-                            <div class="dish__txt">
-                                <h3 class="dish__title">Baba au rhum revisité</h3>
-                                <p class="dish__subtitle">Avec son coulis de citron</p>
-                            </div>
-                            <div class="dish__price-contener">
-                                <p class="dish__price">22€</p>
-                            </div>
-                            <div class="dish__selector">
-                                <div class="dish__check-circle">
-                                    <i class="fa-solid fa-sm fa-check"></i>
-                                </div>
-                            </div>
+                <article class="dish mvt-12">
+                    <input class="dish__checkable" id="dish_3-2" type="checkbox">
+                    <label class="checkable-area" for="dish_3-2"></label>
+                    <div class="dish__txt">
+                        <h3 class="dish__title">Baba au rhum revisité</h3>
+                        <p class="dish__subtitle">Avec son coulis de citron</p>
+                    </div>
+                    <div class="dish__price-contener">
+                        <p class="dish__price">22€</p>
+                    </div>
+                    <div class="dish__selector">
+                        <div class="dish__check-circle">
+                            <i class="fa-solid fa-sm fa-check"></i>
                         </div>
-                    </label>
+                    </div>
                 </article>
-                <article class="dish_contener">
-                    <input class="check-dish" id="dish_3-3" type="checkbox">
-                    <label for="dish_3-3">
-                        <div class="dish mvt-13">
-                            <div class="dish__txt">
-                                <h3 class="dish__title">Tarte au citron meringuée</h3>
-                                <p class="dish__subtitle">Déstructurée</p>
-                            </div>
-                            <div class="dish__price-contener">
-                                <p class="dish__price">23€</p>
-                            </div>
-                            <div class="dish__selector">
-                                <div class="dish__check-circle">
-                                    <i class="fa-solid fa-sm fa-check"></i>
-                                </div>
-                            </div>
+                <article class="dish mvt-13">
+                    <input class="dish__checkable" id="dish_3-3" type="checkbox">
+                    <label class="checkable-area" for="dish_3-3"></label>
+                    <div class="dish__txt">
+                        <h3 class="dish__title">Tarte au citron meringuée</h3>
+                        <p class="dish__subtitle">Déstructurée</p>
+                    </div>
+                    <div class="dish__price-contener">
+                        <p class="dish__price">23€</p>
+                    </div>
+                    <div class="dish__selector">
+                        <div class="dish__check-circle">
+                            <i class="fa-solid fa-sm fa-check"></i>
                         </div>
-                    </label>
+                    </div>
                 </article>
 
                 <div class="button-contener">
@@ -267,10 +237,10 @@
     <footer class="footer">
         <h3 class="footer__title">ohmyfood</h3>
         <div class="footer__contener">
-            <div class="footer__contener__icon-links"><i class="footer__icon fa-sm fa-solid fa-utensils"></i><p>Proposer un restaurant</p></div>
-            <div class="footer__contener__icon-links"><i class="footer__icon fa-xs fa-solid fa-handshake-angle"></i><p>Devenir partenaire</p></div>
-            <p class="footer__contener__links">Mentions légales</p>
-            <a class="footer__contener__contact" href="mailto:ohmyfood@gmail.com">Contact</a>
+            <div class="footer__icon-links"><i class="footer__icon fa-sm fa-solid fa-utensils"></i><p>Proposer un restaurant</p></div>
+            <div class="footer__icon-links"><i class="footer__icon fa-xs fa-solid fa-handshake-angle"></i><p>Devenir partenaire</p></div>
+            <p class="footer__links">Mentions légales</p>
+            <a class="footer__contact" href="mailto:ohmyfood@gmail.com">Contact</a>
         </div>
     </footer>
     

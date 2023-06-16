@@ -1,31 +1,10 @@
-// Variables
+// Colors
+$body-background-color: #F7F7F7;
 $main-color: #9356DC;
 $secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-$body-background-color: #F7F7F7;
-$main-title-color: #101010;
-$dark-grey-color: #353535;
-$location-background-color: #EAEAEA;
-$main-icon-color: #7E7E7E;
-$new-label-color: #008766;
-$new-label-background-color: #99E2D0;
 
 
-// Loader
-.loader-page {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: $body-background-color;
-    opacity: 1;
-    z-index: 5;
-    animation: loader 300ms 2700ms forwards;
-}
-
+// Loader contener
 @keyframes loader {
     0% {
         opacity: 1;
@@ -37,20 +16,43 @@ $new-label-background-color: #99E2D0;
     }
 }
 
-
-.loader-contener {
-    position: relative;
+.loader {
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    width: 250px;
-    height: 250px;
-    z-index: 6;
+    width: 100%;
+    height: 100%;
     background-color: $body-background-color;
+    opacity: 1;
+    z-index: 5;
+
+    animation: loader 300ms 2700ms forwards;
+
+    &__contener {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 250px;
+        height: 250px;
+        z-index: 6;
+    }
 }
 
+
+// Cutting board
+@keyframes cutting-board  {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 
 .cutting-board {
     position: absolute;
@@ -61,48 +63,12 @@ $new-label-background-color: #99E2D0;
     background: linear-gradient(0deg, $main-color -11%, $secondary-color 124%);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
+
     animation: cutting-board 150ms 1050ms forwards;
 }
 
-@keyframes cutting-board  {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
 
-
-.knife {
-    position: absolute;
-    top: 107px;
-    left: 100px;
-    z-index: 8;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    animation: knife-mvt 1000ms forwards;
-
-    .blade {
-        width: 50px;
-        height: 15px;
-        z-index: 8;
-        background: linear-gradient(0deg, $main-color -11%, $secondary-color 124%);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-        border-radius: 100% 0% 42% 58% / 0% 100% 0% 100%;
-    }
-
-    .handle {
-        width: 35px;
-        height: 8px;
-        z-index: 8;
-        background: linear-gradient(0deg, $main-color -11%, $secondary-color 124%);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-        border-radius: 0 25px 25px 0;
-    }
-}
-
+// Knife
 @keyframes knife-mvt {
     0% {
         transform: rotate(60deg) translateY(-50px);
@@ -133,6 +99,56 @@ $new-label-background-color: #99E2D0;
     }
 }
 
+.knife {
+    position: absolute;
+    top: 107px;
+    left: 100px;
+    z-index: 8;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    animation: knife-mvt 1000ms forwards;
+
+    &__blade {
+        width: 50px;
+        height: 15px;
+        z-index: 8;
+        background: linear-gradient(0deg, $main-color -11%, $secondary-color 124%);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 100% 0% 42% 58% / 0% 100% 0% 100%;
+    }
+
+    &__handle {
+        width: 35px;
+        height: 8px;
+        z-index: 8;
+        background: linear-gradient(0deg, $main-color -11%, $secondary-color 124%);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 0 25px 25px 0;
+    }
+}
+
+
+// Carrot
+@keyframes carrot-mvt {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes carrot-cut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 .carrot {
     position: absolute;
@@ -144,6 +160,7 @@ $new-label-background-color: #99E2D0;
     z-index: 7;
     background: linear-gradient(0deg, $main-color -10%, $secondary-color 30%);
     border-radius: 12% 88% 89% 11% / 54% 47% 53% 46%;
+
     animation: carrot-mvt 170ms 1000ms ease-in forwards;
 
     .cut{
@@ -156,58 +173,33 @@ $new-label-background-color: #99E2D0;
 
         &-1 {
             left: 25%;
-            animation: carrot-cut-1 150ms 100ms  linear forwards;
+            animation: carrot-cut 150ms 100ms  linear forwards;
         }
 
         &-2 {
             left: 50%;
-            animation: carrot-cut-2 150ms 400ms  linear forwards;
+            animation: carrot-cut 150ms 400ms  linear forwards;
         }
 
         &-3 {
             left: 75%;
-            animation: carrot-cut-3 150ms 600ms  linear forwards;
+            animation: carrot-cut 150ms 600ms  linear forwards;
         }
     }
 }
 
-@keyframes carrot-mvt {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(100px);
-        opacity: 0;
-    }
-}
 
-@keyframes carrot-cut-1 {
+// Plate
+@keyframes plate {
     0% {
         opacity: 0;
+        transform: translateX(-100px);
     }
     100% {
         opacity: 1;
+        transform: translateX(0);
     }
 }
-
-@keyframes carrot-cut-2 {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes carrot-cut-3 {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 
 .plate {
     position: absolute;
@@ -219,6 +211,7 @@ $new-label-background-color: #99E2D0;
     border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
     border: 3px solid $main-color;
     opacity: 0;
+
     animation: plate 150ms 1400ms forwards;
 
     .meat-1 {
@@ -255,43 +248,42 @@ $new-label-background-color: #99E2D0;
     }
 }
 
-@keyframes plate {
+
+// Steam
+@keyframes steam {
     0% {
-        opacity: 0;
-        transform: translateX(-100px);
+        opacity: 1;
     }
     100% {
-        opacity: 1;
-        transform: translateX(0);
+        opacity: 0;
     }
 }
-
 
 .steam {
     animation: steam 200ms 2000ms forwards;
 
-    .steam-1 {
+    &__1 {
         position: absolute;
         top: 5px;
         margin-left: 10px;
         z-index: 6;
     }
     
-    .steam-2 {
+    &__2 {
         position: absolute;
         top: 0;
         margin-left: 27px;
         z-index: 6;
     }
     
-    .steam-3 {
+    &__3 {
         position: absolute;
         top: 5px;
         margin-left: 44px;
         z-index: 6;
     }
     
-    .steam-part-1 {
+    &__part-1 {
         position: absolute;
         top: -32px;
         margin-left: 17px;
@@ -302,7 +294,7 @@ $new-label-background-color: #99E2D0;
         border-radius: 50%;
     }
     
-    .steam-part-2 {
+    &__part-2 {
         position: absolute;
         top: -46px;
         margin-left: 13px;
@@ -313,7 +305,7 @@ $new-label-background-color: #99E2D0;
         border-radius: 50%;
     }
     
-    .steam-part-3 {
+    &__part-3 {
         position: absolute;
         top: -60px;
         margin-left: 17px;
@@ -325,15 +317,18 @@ $new-label-background-color: #99E2D0;
     }    
 }
 
-@keyframes steam {
+
+// Bell
+@keyframes bell {
     0% {
         opacity: 1;
+        transform: rotate(-90deg) translate(50px, -50px);
     }
     100% {
-        opacity: 0;
+        opacity: 1;
+        transform: rotate(0);
     }
 }
-
 
 .bell {
     position: absolute;
@@ -346,9 +341,10 @@ $new-label-background-color: #99E2D0;
     border: 3px solid $main-color;
     border-radius: 48% 52% 47% 53% / 82% 80% 20% 18%;
     opacity: 0;
+
     animation: bell 300ms 2000ms forwards;
 
-    .bell-wrist {
+    &__wrist {
         position: absolute;
         top: -10px;
         margin-left: 33px;
@@ -361,39 +357,8 @@ $new-label-background-color: #99E2D0;
     }
 }
 
-@keyframes bell {
-    0% {
-        opacity: 1;
-        transform: rotate(-90deg) translate(50px, -50px);
-    }
-    100% {
-        opacity: 1;
-        transform: rotate(0);
-    }
-}
 
-
-.loading-bar {
-    position: absolute;
-    top: 180px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-    height: 15px;
-    z-index: 6;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-
-    .progress {
-        position: relative;
-        width: 0%;
-        height: 100%;
-        background: linear-gradient(90deg, $main-color -11%, $secondary-color 124%);
-        border-radius: 25px;
-        animation: loading 2500ms cubic-bezier(.69,.02,.89,.7) forwards;
-    }
-}
-
+// Loading bar
 @keyframes loading {
     0% {
         width: 0%;
@@ -412,5 +377,27 @@ $new-label-background-color: #99E2D0;
     }
     90%,100% {
         width: 100%;
+    }
+}
+
+.loading-bar {
+    position: absolute;
+    top: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 15px;
+    z-index: 6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+
+    &__progress {
+        position: relative;
+        width: 0%;
+        height: 100%;
+        background: linear-gradient(90deg, $main-color -11%, $secondary-color 124%);
+        border-radius: 25px;
+        
+        animation: loading 2500ms cubic-bezier(.69,.02,.89,.7) forwards;
     }
 }
