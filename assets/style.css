@@ -490,9 +490,11 @@
   opacity: 0;
   padding-top: 18px;
   cursor: pointer;
-  color: transparent;
   background-image: linear-gradient(180deg, #9356DC 10%, #FF79DA 70%);
   background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   transition: opacity 600ms;
 }
 .heart .heart__checkable:checked + label .heart__colored {
